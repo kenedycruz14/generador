@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" integrity="sha512-CNgIRecGo7nphbeZ04Sc13ka07paqdeTu0WR1IM4kNcpmBAUSHSQX0FslNhTDadL4O5SAGapGt4FodqL8My0mA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>-->
+
+	<title>Generador de qr</title>
+	<style>
+		body {
+			display: grid;
+			place-items: center;
+			height: 100vh;
+			margin: 0;
+			justify-content: normal;
+		}
+		.box1 {
+			display: grid;
+			    justify-content: center;
+		}
+		.box {
+			background-color: #ccc;
+			padding: 20px;
+			border-radius: 10px;
+			box-shadow: 0 0 10px rgba(0,0,0,0.5);
+			text-align: center;
+			max-width: 80%;
+			width: 500px;
+			height: auto;
+		}
+		input[type="text"] {
+			border: 2px solid black;
+			border-radius: 10px;
+			padding: 10px;
+			margin: 10px;
+			width: 200px;
+		}
+		h1{
+			text-align: center;
+		}
+		.btn {
+			background: linear-gradient(to bottom, #00cc00 0%, #009900 100%);
+			border: none;
+			border-radius: 10px;
+			color: white;
+			padding: 10px 20px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 16px;
+			margin: 10px;
+			cursor: pointer;
+		}
+		select {
+			width: auto;
+			margin: 10px;
+			border-radius: 10px;
+			padding: 10px;
+			border: 1px solid #ccc;
+			background-color: #fff;
+			font-size: 16px;
+			
+			height: 40px;
+			appearance: none;
+			-webkit-appearance: none; /* Para Safari */
+			background-image: url("data:image/svg+xml,<svg viewBox='0 0 10 5' xmlns='http://www.w3.org/2000/svg'><path d='M0 0L5 5L10 0' fill='none' stroke='%23ccc'/></svg>");
+			background-repeat: no-repeat;
+			background-position: right 10px center;
+			cursor: pointer;
+		}
+		#monto {
+  display: none;
+}
+.red{
+	background-color: darkred;
+	background: darkred;
+}
+.grid{
+	display: grid;
+	justify-items:center;
+}
+
+	</style>
+
+
+</head>
+<body>
+	<div class="grid">
+		<div class=""><h1>Generador de QRs</h1></div>
+		<div class="box">
+			<div class="box1">
+			<select id="bancos" name="bancos">
+				<option value="0102">venezuela</option>
+				<option value="0108">Provincial</option>
+				<option value="0132">banesco</option>
+				<option value="0135">bicentenario</option>
+			</select>
+			<input type="text" id="cedula" name="cedula" placeholder="Cedula">
+			<input type="text" id="telefono" name="telefono" placeholder="telefono">
+			<input type="text" id="monto" name="monto" placeholder="monto">
+			<br>
+			<button class="btn" id="guardarsesion">Haz clic aqui</button>
+			<button class="btn red" id="cerrarsesion">Cierra Sesión</button>
+			<div id="qrcode"></div>
+	<script type="text/javascript">
+	//new QRCode(document.getElementById("qrcode"), "http://jindo.dev.naver.com/collie");
+	</script>
+			</div>
+		</div>
+	</div>
+</body>
+<script src="qrcode.min.js"></script>
+<script src="script.js"></script>
+
+
+
+</html>
